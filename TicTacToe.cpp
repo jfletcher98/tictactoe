@@ -35,6 +35,8 @@ void Board::DisplayBoard() {
         }
         std::cout<<std::endl;
     }
+
+    std::cout<<"---------------------------"<<std::endl;
 }
 
 int main() {
