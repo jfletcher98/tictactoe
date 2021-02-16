@@ -16,7 +16,7 @@ class Board{
         void CreateBoard();
         void DisplayBoard();
 
-        void PlaceMarker(int row, int col, int playerNum);
+        void PlaceMarker(Point coordinate, int playerNum);
 
         Point PlayerChoice();
 
@@ -55,13 +55,14 @@ void Board::DisplayBoard()
 }
 
 
-void Board::PlaceMarker(int row, int col, int playerNum) {
+void Board::PlaceMarker(Point coor, int playerNum) {
     if(playerNum == 1) {
-        arr_[row][col] = SquareType::Player1;
+        arr_[coor.row][coor.col] = SquareType::Player1;
     }
     else if(playerNum == 2) {
-        arr_[row][col] = SquareType::Player2;
+        arr_[coor.row][coor.col] = SquareType::Player2;
     }
+}
 
 Point Board::PlayerChoice()
 {
@@ -77,14 +78,23 @@ Point Board::PlayerChoice()
 
 int main() {
     Board b1;
-
+    int turn = 0;
     b1.CreateBoard();
-    b1.PlayerChoice();
-    b1.DisplayBoard();
-    b1.PlaceMarker(1, 1, 1);
-    b1.DisplayBoard();
-    b1.PlaceMarker(2, 2, 2);
-    b1.DisplayBoard();
+    Point answer;
+    while(turn < 9) {
+        b1.DisplayBoard();
+        
+        if(turn % 2 == 0) {
+            std::cout<<"Player Ones turn: "<<std::endl;
+            answer = b1.PlayerChoice();
+            b1.PlaceMarker(answer, 1);
+        } else {
+            std::cout<<"Player Twos turn: "<<std::endl;
+            answer = b1.PlayerChoice();
+            b1.PlaceMarker(answer, 2);
+        }
 
+        turn++;
+    }
     return 0;
 }
