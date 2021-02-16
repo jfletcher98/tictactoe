@@ -15,7 +15,11 @@ class Board{
     public:
         void CreateBoard();
         void DisplayBoard();
+
+        void PlaceMarker(int row, int col, int playerNum);
+
         Point PlayerChoice();
+
 
     private:
         SquareType arr_[3][3];
@@ -36,11 +40,12 @@ void Board::DisplayBoard()
     for(int i = 0; i < 3; i++) {
         for(int j = 0; j < 3; j++) {
             if(arr_[i][j] == SquareType::Empty){
-                std::cout<<"c ";
+
+                std::cout<<" ⚪ ";;
             } else if(arr_[i][j] == SquareType::Player1) {
-                std::cout<<"X ";
+                std::cout<<" ❌ ";;
             } else {
-                std::cout<<"O ";
+                std::cout<<" ⭕ ";;
             }
         }
         std::cout<<std::endl;
@@ -48,6 +53,15 @@ void Board::DisplayBoard()
 
     std::cout<<"---------------------------"<<std::endl;
 }
+
+
+void Board::PlaceMarker(int row, int col, int playerNum) {
+    if(playerNum == 1) {
+        arr_[row][col] = SquareType::Player1;
+    }
+    else if(playerNum == 2) {
+        arr_[row][col] = SquareType::Player2;
+    }
 
 Point Board::PlayerChoice()
 {
@@ -63,8 +77,14 @@ Point Board::PlayerChoice()
 
 int main() {
     Board b1;
+
     b1.CreateBoard();
     b1.PlayerChoice();
     b1.DisplayBoard();
+    b1.PlaceMarker(1, 1, 1);
+    b1.DisplayBoard();
+    b1.PlaceMarker(2, 2, 2);
+    b1.DisplayBoard();
+
     return 0;
 }
