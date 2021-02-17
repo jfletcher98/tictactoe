@@ -1,0 +1,67 @@
+ ⚪  ⚪  ⚪ 
+ ⚪  ⚪  ⚪ 
+ ⚪  ⚪  ⚪ 
+---------------------------
+Player Ones turn: 
+Please enter col 
+0
+Please enter row 
+0
+ ❌  ⚪  ⚪ 
+ ⚪  ⚪  ⚪ 
+ ⚪  ⚪  ⚪ 
+---------------------------
+Player Twos turn: 
+Please enter col 
+0
+Please enter row 
+2
+ ❌  ⚪  ⚪ 
+ ⚪  ⚪  ⚪ 
+ ⭕  ⚪  ⚪ 
+---------------------------
+Player Ones turn: 
+Please enter col 
+2
+Please enter row 
+0
+ ❌  ⚪  ❌ 
+ ⚪  ⚪  ⚪ 
+ ⭕  ⚪  ⚪ 
+---------------------------
+Player Twos turn: 
+Please enter col 
+1
+Please enter row 
+0
+ ❌  ⭕  ❌ 
+ ⚪  ⚪  ⚪ 
+ ⭕  ⚪  ⚪ 
+---------------------------
+Player Ones turn: 
+Please enter col 
+2
+Please enter row 
+2
+ ❌  ⭕  ❌ 
+ ⚪  ⚪  ⚪ 
+ ⭕  ⚪  ❌ 
+---------------------------
+Player Twos turn: 
+Please enter col 
+1
+Please enter row 
+1
+ ❌  ⭕  ❌ 
+ ⚪  ⭕  ⚪ 
+ ⭕  ⚪  ❌ 
+---------------------------
+Player Ones turn: 
+Please enter col 
+2
+Please enter row 
+1
+ ❌  ⭕  ❌ 
+ ⚪  ⭕  ❌ 
+ ⭕  ⚪  ❌ 
+---------------------------
